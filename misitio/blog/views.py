@@ -1,5 +1,5 @@
 # Create your views here.
-from blog.models import Post, Author
+from blog.models import *
 from django.shortcuts import render_to_response, get_object_or_404
 
 def listado(request):
@@ -9,3 +9,7 @@ def listado(request):
 def detalle(request, idpost):
     post = Post.objects.get(pk=idpost)
     return render_to_response('detalle.html', {'post':post})
+
+def galerias(request):
+    galerias = Galeria.objects.all()
+    return render_to_response('galerias.html', {'galerias':galerias})

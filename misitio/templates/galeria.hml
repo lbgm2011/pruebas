@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Galeria</title>
+    </head>
+    <body>
+        <section>
+                <h2>{{ galeria.titulo}}</h2>
+                <p>{{ galeria.descripcion }}</p>
+        </section>
+    </body>
+</html>

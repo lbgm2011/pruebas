@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Galerias</title>
+    </head>
+    <body>
+        <section>
+            <h1>Galerias<h1>
+                <ul>
+                    {% for g in galerias %}
+                    <li><a href='{{ galeria.get_absolute_url }}'>{{ g.titulo }}</a></li>
+                    {% endfor %}
+                </ul>
+        </section>
+    </body>
+</html>
