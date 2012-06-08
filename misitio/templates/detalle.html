@@ -9,6 +9,11 @@
                 <h2>{{ post.title}}</h2>
                 <p>{{ post.body }}</p>
                 <p>{{ post.author}} - <em>{{ post.author.email}}</em></p>
+                <ul>
+                    {% for galeria in galerias %}
+                        <li>{{ galeria }}</li>
+                    {% endfor %}
+                </ul>
         </section>
     </body>
 </html>
