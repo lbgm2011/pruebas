@@ -8,7 +8,7 @@
             <h1>Galerias<h1>
                 <ul>
                     {% for g in galerias %}
-                    <li><a href='{{ galeria.get_absolute_url }}'>{{ g.titulo }}</a></li>
+                    <li><a href='{{ g.get_absolute_url }}'>{{ g.titulo }}</a></li>
                     {% endfor %}
                 </ul>
         </section>

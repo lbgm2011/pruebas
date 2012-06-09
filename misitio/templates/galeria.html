@@ -1,14 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Publicaciones</title>
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block title %}Galeria{% endblock %}
+{% block content %}
         <section>
-            <h1><a href='/listado/'>Publicaciones</a><h1>
-                <h2>{{ post.title}}</h2>
+            <h1><a href='{% url inicio %}'>Inicio</a><h1>
+            <div id="titulos">
+                <div class="galeria">
+                    <h2>{{ galeria.titulo}}</h2>
+                </div>
+            </div>
+                <div id="borde"></div>
+                <ul class="cat">
+                {% for foto in fotos %}
+                <li>
+                        <a href="#">
+                            <img class="min" src="{{foto.foto.url}}" alt="#" />
+                            <img class="max" src="{{foto.foto.url}}" alt="#" />
+                        </a>
+                    </li>
+                <li>
+                {% endfor %}
+                </ul>
                 <p>{{ post.body }}</p>
                 <p>{{ post.author}} - <em>{{ post.author.email}}</em></p>
         </section>
-    </body>
-</html>
+        {% endblock %}

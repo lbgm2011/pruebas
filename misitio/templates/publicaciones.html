@@ -1,2 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+    <section>
+        <h1>Publicaciones<h1>
+            <ul>
+                {% for post in publicaciones %}
+                <li><a href='{{ post.get_absolute_url }}'>{{ post.title}}</a></li>
+                {% endfor %}
+            </ul>
+    </section>
+{% endblock %}

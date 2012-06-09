@@ -28,6 +28,10 @@ class Galeria(models.Model):
     def __unicode__(self):
         return self.titulo
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('detallegaleria', (), {'idgaleria': self.pk} )
+
 class Foto(models.Model):
     galeria = models.ForeignKey(Galeria)
     foto = models.ImageField(upload_to='imagenes')
